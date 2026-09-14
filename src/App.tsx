@@ -1,3 +1,4 @@
+import { ChatBot } from './components/chatbot';
 import { HexBg } from './components/hex-bg';
 import { MouseTrail } from './components/mouse-trail';
 import { ScrollBar } from './components/scroll-bar';
@@ -7,6 +8,7 @@ import { InfoSection } from './sections/info.section';
 import { Projects } from './sections/projects.section';
 import { TechStack } from './sections/tech-stack.section';
 import './styles/about-me.css';
+import './styles/chatbot.css';
 import './styles/contact.css';
 import './styles/floating-button.css';
 import './styles/glow-box.css';
@@ -29,6 +31,7 @@ function App() {
 			<Projects />
 			<TechStack />
 			<Contact />
+			<ChatBot />
 		</>
 	);
 }

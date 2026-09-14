@@ -15,6 +15,7 @@
 		"vite",
 		"Vitest",
 		"vkha",
+		"ovkha",
 		"Wimetrix"
 	],
 	"ignorePaths": [
