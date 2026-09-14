@@ -79,6 +79,8 @@ export const personal = {
 	fullName: 'Đỗ Văn Kha',
 	title: 'Backend Developer / Software Engineer',
 	greeting: 'Hi, I am',
+	avatar: '/avatar.jpg',
+	cvUrl: '/cv.pdf',
 	repoUrl: 'https://github.com/vkha03/portfolio-latest',
 	repoStarLabel: '⭐ Star this repo',
 	showRepoStar: true,

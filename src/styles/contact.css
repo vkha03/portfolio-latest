@@ -39,6 +39,47 @@
 	margin-inline: auto;
 }
 
+/* CTA Group */
+.contact-cta-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.contact-cv-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem 2rem;
+	border-radius: 50px;
+	text-decoration: none;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.05rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	background: rgba(31, 195, 255, 0.08);
+	border: 1px solid rgba(31, 195, 255, 0.4);
+	backdrop-filter: blur(10px);
+	transition: all 0.35s ease;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-cv-btn:hover {
+	transform: translateY(-3px);
+	border-color: rgb(31, 195, 255);
+	background: rgba(31, 195, 255, 0.15);
+	box-shadow: 0 8px 30px rgba(31, 195, 255, 0.3);
+	color: #ffffff;
+}
+
+.contact-cv-btn .btn-icon {
+	font-size: 1.2rem;
+	color: rgb(31, 195, 255);
+}
+
 /* CTA Button */
 .contact-cta {
 	display: inline-flex;

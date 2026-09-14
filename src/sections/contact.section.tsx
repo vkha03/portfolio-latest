@@ -1,6 +1,8 @@
+import { HiDownload } from 'react-icons/hi';
+
 import { GlowLink } from '../components/glow-box-link';
 import { SectionTitle } from '../components/section-title.component';
-import { contact, socialLinks } from '../data/portfolio';
+import { contact, personal, socialLinks } from '../data/portfolio';
 
 export const Contact = () => {
 	return (
@@ -18,13 +20,24 @@ export const Contact = () => {
 					<h3 className='contact-headline'>{contact.headline}</h3>
 					<p className='contact-desc'>{contact.description}</p>
 
-					<a
-						href={`mailto:${contact.email}`}
-						className='contact-cta'
-					>
-						<span className='cta-glow' />
-						<span className='cta-text'>✉ {contact.email}</span>
-					</a>
+					<div className='contact-cta-group'>
+						<a
+							href={`mailto:${contact.email}`}
+							className='contact-cta'
+						>
+							<span className='cta-glow' />
+							<span className='cta-text'>✉ {contact.email}</span>
+						</a>
+						<a
+							href={personal.cvUrl}
+							download='Do_Van_Kha_CV.pdf'
+							className='contact-cv-btn'
+							title='Download Curriculum Vitae (PDF)'
+						>
+							<HiDownload className='btn-icon' />
+							<span>Download CV</span>
+						</a>
+					</div>
 
 					<div className='contact-socials'>
 						{socialLinks.map((link) => (

@@ -1,3 +1,5 @@
+import { HiDownload } from 'react-icons/hi';
+
 import { FloatingButton } from '../components/floating-button';
 import { GlowLink } from '../components/glow-box-link';
 import { TextHover } from '../components/text-hover.component';
@@ -26,12 +28,46 @@ export const InfoSection = () => {
 				href={aboutNav.href}
 			/>
 
-			<p>{personal.greeting}</p>
+			<div className='hero-avatar-wrapper'>
+				<div className='hero-avatar-glow'></div>
+				<img
+					src={personal.avatar}
+					alt={personal.fullName}
+					className='hero-avatar-img'
+				/>
+				<div
+					className='hero-status-badge'
+					title='Open to opportunities'
+				>
+					<span className='status-dot'></span>
+					<span className='status-pulse'></span>
+				</div>
+			</div>
+
+			<p className='hero-greeting'>{personal.greeting}</p>
 			<TextHover
 				text={personal.name}
 				className='name'
 			/>
-			<p>{personal.title}</p>
+			<p className='hero-title'>{personal.title}</p>
+
+			<div className='hero-cta-group'>
+				<a
+					href={personal.cvUrl}
+					download='Do_Van_Kha_CV.pdf'
+					className='hero-btn-cv'
+					title='Download Curriculum Vitae (PDF)'
+				>
+					<HiDownload className='btn-icon' />
+					<span>Download CV</span>
+				</a>
+				<a
+					href='#contact'
+					className='hero-btn-contact'
+				>
+					<span>Get In Touch</span>
+				</a>
+			</div>
 
 			<FloatingButton
 				label={techNav.label}
