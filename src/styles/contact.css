@@ -1,0 +1,135 @@
+.contact-section {
+	padding: 4rem 4rem 2rem;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.contact-section .title {
+	position: relative;
+	top: 0;
+	margin-bottom: 2rem;
+}
+
+.contact-content {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.contact-body {
+	margin-top: 2rem;
+}
+
+.contact-headline {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 1rem;
+	letter-spacing: -0.02em;
+}
+
+.contact-desc {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.1rem;
+	color: rgba(255, 255, 255, 0.65);
+	line-height: 1.75;
+	margin-bottom: 2.5rem;
+	max-width: 550px;
+	margin-inline: auto;
+}
+
+/* CTA Button */
+.contact-cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem 2.5rem;
+	border-radius: 50px;
+	text-decoration: none;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.05rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: #000;
+	background: linear-gradient(135deg, rgb(31, 195, 255), rgb(0, 230, 180));
+	position: relative;
+	overflow: hidden;
+	transition: all 0.35s ease;
+	box-shadow:
+		0 6px 30px rgba(31, 195, 255, 0.25),
+		0 0 20px rgba(31, 195, 255, 0.1);
+}
+
+.contact-cta:hover {
+	transform: translateY(-3px);
+	box-shadow:
+		0 10px 40px rgba(31, 195, 255, 0.35),
+		0 0 30px rgba(31, 195, 255, 0.15);
+}
+
+.cta-glow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 120%;
+	height: 120%;
+	background: radial-gradient(
+		circle,
+		rgba(31, 195, 255, 0.2) 0%,
+		transparent 70%
+	);
+	opacity: 0;
+	transition: opacity 0.35s ease;
+}
+
+.contact-cta:hover .cta-glow {
+	opacity: 1;
+}
+
+.cta-text {
+	position: relative;
+	z-index: 1;
+}
+
+/* Social icons row */
+.contact-socials {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+}
+
+/* Divider */
+.contact-socials + .contact-copyright {
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	padding-top: 1.5rem;
+}
+
+.contact-copyright {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.3);
+	letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 768px) {
+	.contact-section {
+		padding: 3rem 2rem 2rem;
+	}
+
+	.contact-headline {
+		font-size: 1.5rem;
+	}
+
+	.contact-desc {
+		font-size: 1rem;
+	}
+
+	.contact-cta {
+		padding: 0.85rem 2rem;
+		font-size: 0.95rem;
+	}
+}

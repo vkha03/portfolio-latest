@@ -64,6 +64,16 @@ export type TechGroup = {
 	items: TechItem[];
 };
 
+export type ProjectItem = {
+	title: string;
+	description: string;
+	image: string;
+	techStack: string[];
+	repoUrl?: string;
+	liveUrl?: string;
+	highlights: string[];
+};
+
 export const personal = {
 	name: 'VAN KHA',
 	fullName: 'Đỗ Văn Kha',
@@ -119,7 +129,21 @@ export const about = {
 	],
 	timeline: [
 		{
-			heading: 'Featured Project',
+			heading: 'Education',
+			items: [
+				{
+					role: 'Software Engineering Student',
+					org: 'Self-Directed & Practical Learning',
+					period: 'Ongoing',
+					bullets: [
+						'Focused on backend systems design, distributed architectures, and database optimization through hands-on project development.',
+						'Continuously deepening expertise in NestJS, Docker containerization, and cloud deployment (Vercel, Railway).',
+					],
+				},
+			],
+		},
+		{
+			heading: 'Experience',
 			items: [
 				{
 					role: 'System Architecture & Backend',
@@ -148,21 +172,32 @@ export const about = {
 				},
 			],
 		},
-		{
-			heading: 'Trajectory',
-			items: [
-				{
-					role: 'Backend Engineer',
-					org: 'Continuous Growth Roadmap',
-					period: 'Present - Future',
-					bullets: [
-						'Mastering advanced NestJS design patterns, microservices architecture, and message queues (RabbitMQ/Kafka).',
-						'Advancing expertise in cloud-native architecture (AWS/GCP), event-driven systems, and AI engineering pipelines.',
-					],
-				},
-			],
-		},
 	] satisfies TimelineSection[],
+};
+
+export const projects: ProjectItem[] = [
+	{
+		title: 'SmartQuery',
+		description:
+			'An AI-Powered Interface that bridges non-technical users and complex databases by converting natural language into precise SQL queries.',
+		image: '/smartquery.png',
+		techStack: ['Node.js', 'MySQL', 'AI Agents', 'Docker'],
+		repoUrl: 'https://github.com/vkha03/SmartQuery',
+		highlights: [
+			'Robust Prompt & Context processing pipeline for AI Agents',
+			'SQL Injection prevention from AI-generated outputs',
+			'Schema Context optimization for complex DB structures',
+		],
+	},
+];
+
+export const contact = {
+	section: { title: 'Get In', subtitle: 'TOUCH' },
+	headline: "Let's Build Something Great",
+	description:
+		'I am always open to opportunities involving real-world backend architecture, system optimization, and AI integration. Feel free to reach out.',
+	email: 'dovankha0802@gmail.com',
+	copyright: `© ${new Date().getFullYear()} Đỗ Văn Kha. Crafted with precision.`,
 };
 
 export const techStack = {
